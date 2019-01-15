@@ -79,6 +79,10 @@ namespace Ed.Utilities.Date
                 testDate.IsMemorialDay();
 
         public static int WeekdayNumberInMonth(this DateTime testDate) => (testDate.Day - 1) / 7 + 1;
+
+        public static int MonthDifference(this DateTime date, DateTime difference ) 
+            => (date.Month - difference.Month)    + 12 * (date.Year - difference.Year);
+        
         
     }
 }
